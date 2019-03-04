@@ -1,0 +1,544 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!---site title-->
+<title>Megan Doris | UXUI Design & Web Development</title>
+<!-- description of what the site is about -->
+<meta name="description" content="User Experience, User Interface, Graphic Designer & Web Developer for York, Lancaster, Lebanon and Harrisburg areas.">
+<!-- keywords relating to content of site -->
+<meta name="keywords" content="UX, Graphic Design, Web Design, Web Developer, HTML, CSS, JavaScript, jQuery, Adobe XD, York, Lancaster, Harrisburg, Lebanon, Megan, Doris">
+<!-- author of site -->
+<meta name="author" content="Megan Doris">
+<!-- allows for responsive design -->
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<!-- style sheets -->
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+/*allows for one page scroll */
+$(document).ready(function(){
+$('#nav li a', '#logo').click(function(e){
+	var targetHref= $(this).attr('href');
+
+$('html, body').animate({
+		scrollTop: $(targetHref).offset().top
+	}, 1000);
+    
+    e.preventDefault();
+});
+
+/*mouseover product images to see blurr*/
+$("#blockhouse-home-page").mouseover(function(){
+	$("#Blockhouse-Website-Title").show();	
+})
+	$("#blockhouse-home-page").mouseout(function(){
+		$("#Blockhouse-Website-Title").hide();
+	});
+
+
+	
+/*click on blurred image to revewal more information*/
+$("#blockhouse-home-page").click(function(){
+	event.stopPropagation();
+     $("#Project1-Information").slideToggle();
+    });
+
+
+$("#trainingGrid-logo").click(function(){
+	event.stopPropagation();
+     $("#Project2-Information").slideToggle();
+    });
+
+	$("#solo").click(function(){
+	event.stopPropagation();
+     $("#Project3-Information").slideToggle();
+    });
+	
+	$("#LMS-Video").click(function(){
+	event.stopPropagation();
+     $("#Project4-Information").slideToggle();
+    });
+
+	$("#LVC-Neuroscience").click(function(){
+	event.stopPropagation();
+     $("#Project5-Information").slideToggle();
+    });
+
+	$("#Zoo-brand-development").click(function(){
+	event.stopPropagation();
+     $("#Project6-Information").slideToggle();
+    });
+	
+	
+$("#MHA-brand").click(function(){
+	event.stopPropagation();
+     $("#Project7-Information").slideToggle();
+    });
+	
+	
+	
+	
+	
+/* allows user to click anywhere outside of slidetoggle to close*/
+$(window).click(function(){
+	$(".project-info").slideUp();
+});
+	
+	
+$(".project-info").click(function(event){
+	event.stopPropagation();
+});
+
+/*allows users to click x to slide up toggle info*/
+
+$(".close").click(function(){
+	$(".project-info").slideUp();
+});
+
+
+	
+})
+	
+</script>
+</head>
+
+<body>
+<!--contains all elements on page -->
+<wrapper>
+<!-- page header containing navigation and logo -->
+	<header>
+<!--logo in upper right hand corner -->
+		<a href="#hero">
+			<div id="logo">
+			<a href="#hero">MDUX</a>
+			</div>
+		</a>
+<!-- navigation menu items -->
+		<ul id="nav">
+			<li><a href="" target="_blank">Resume</a></li>
+			<li><a href="#email">Contact</a></li>
+			<li id="about-link"><a href="#about-me">About</a></li>
+			<li><a href="#professional-work">Projects</a></li>
+		</ul>
+	</header>
+<!-- hero image -->
+	<div id="hero"> 
+	<!-- gradient overlay -->
+		<div id="overlay">
+		</div>
+	</div>
+<!-- title over hero image -->
+	<div id="introduction">
+		<h1>MEGAN DORIS</h1><br>
+		<h2>User Experience Developer</h2>
+	</div>
+
+<!-- container holding all projects of professional work -->
+	<article id="professional-work">
+<!-- section of container or article that is dedicated to web and mobile app design -->
+		<section id="technology-design" class="project-sections">
+<!-- title of section -->
+			<h2>Web & Mobile App Design</h2>
+<!-- container made to keep project images together with display flex but remove titles from it -->
+			<div class="project-container">
+<!--- first project image container on page of blockhosue website -->
+				<figure class="projects" id="blockhouse-website">
+					<img class="project-image" id="blockhouse-home-page" src="assets/Blockhouse-Home.png" width="100%" height:100%; alt="Blockhouse Furniture Home Page">
+				</figure>
+<!-- slide toggle information regarding details of the blockhouse furniture website ---->
+				<div id="Project1-Information" class="project-info">
+				<!-- x to close --->
+					<div class="close">X</div>
+					<!-- title of details -->
+					<h3>Blockhouse Furniture Website</h3>
+					<!-- first image on toggle-->
+					<figure class="drop-down-main-image">
+						<img id="blockhouse-website-main-image" class="main-image" src="assets/Blockhouse-Home.png" width="100%"  alt="Blockhouse Furniture Website Home Page Design">
+					</figure>
+					<!-- paragraph about above image -->
+					<p class="drop-down-paragraph"> In 2016, I began working for Blockhouse Furniture Company as their Webmaster. Before the end of the year, I  completely redesigned and developed a new website. The new site greatly enhanced SEO through stronger keywords and by providing a more enjoyable user experience. I used HMTL, CSS, CSS3, HMTL5, JavaScript, jQuery, and PHP languages during development.</p>
+					<!-- two images side by side--->
+					<div id="old-vs-new" class="before-after-row">
+					<!--old image-->
+						<figure class="drop-down-image">
+							<img id="original-blockhouse-site" class="drop-down-img" src="assets/original-blockhouse-website.PNG" width="100%" alt="The original Blockhouse Website">
+					<!-- new image-->
+						</figure>
+							<figure class="drop-down-image">
+								<img id="new-blockhouse-website" class="drop-down-img" src="assets/blockhouse-new-site.PNG" width="100%" alt="The new Blockhouse Website">
+							</figure>
+					</div>
+					<!-- paragraph about old and new -->
+							<p class="drop-down-paragraph"> The original website was dark, out-dated, and confusing for users to navigate through. It gave little to no feedback to user interaction and provided much confusion in terms of wayfinding. The new site I created was responsive, modern, and user-friendly.</p>
+					
+					<!-- two images side by side--->
+					<div id="old-product-vs-new-product" class="before-after-row">
+						<figure class="drop-down-image">
+							<img id="original-product-page" class="drop-down-img" src="assets/old-site-product-main-page.png" width="100%" alt="The original main product page">
+						</figure>
+							<figure class="drop-down-image">
+								<img id="new-product-page" class="drop-down-img" src="assets/new-product-main-page.png" width="100%" alt="The new product main page">
+							</figure>
+					</div>	
+					<!-- paragraph about two images -->
+							<p class="drop-down-paragraph"> The original product page featured dated images with chairs covered in fabric. If the user didn't like the fabric on the chair, they wouldn't click on the product to view more details. The page was also very long and it was easy to lose orientation. The new page featured neutral colored fabric chairs to not bias the user. There was also a side navigation put into place to allow the user to easily get to each section quickly. This was done using a jquery smooth scroll. Each picture also became enlarged on hover indicating the user could click the product image to see more details.</p>
+					
+					<!--video of content -->
+					<video id="spec-page-functionality" class="drop-down-video" width="50%" style="display:block; margin:20px auto;" controls>
+						<source src="assets/Blockhouse-Product-Page.mp4" alt="Product Spec Page Functionality" type="video/mp4">
+					</video>
+					<!-- paragraph about video -->
+						<p class="drop-down-paragraph">The video below demonstrates the functionality of the new product pages and product spec pages. You can see how the new site provided more feedback to user impact, enhance orientation and wayfinding with titles, sidebar navigation, and breadcrumbs, as well as offer more customization of the product.</p>
+					
+					<!--video of content -->
+					<video id="fabrics-page" class="drop-down-video" width="50%" style="display:block; margin:20px auto;" controls>
+						<source src="assets/Blockhouse-Fabrics-Page.mp4" alt="Dynamic Database-driven Fabrics Page" type="video/mp4">
+					</video>
+					<!-- paragraph about video -->
+						`<p class="drop-down-paragraph">Shown above is the Fabrics page I dreamed up for Blockhouse. Customers would have to call in and request several fabric swatches based on a catalog they would receive from our sales representatives. This process was long and cumbersome. With the help of our IT department, I created a dynamically driven, interactive, fabrics page that would allow users to find the perfect fabric for their environment. This page was created using HTML, CSS, JavaScript, and PHP. </p>	
+
+					<!--video of content -->
+					<video id="contact-page" class="drop-down-video" width="50%" style="display:block; margin:20px auto;" controls>
+						<source src="assets/Blockhouse-Contact.mp4" alt="Dynamic Database-driven Contact Page" type="video/mp4">
+					</video>
+						<!-- paragraph about video -->
+						<p class="drop-down-paragraph">The other idea I had brainstormed for Blockhouse was an interactive contact page. The phone number used to be listed at the top of the header but that was the only way a user could get in contact with the company. The page I created allowed the user to select their state and then send a message to their sales rep directly. A picture and bio of the sales rep would also appear after they selected the state. Creating a more personal connection with the person they would be speaking to. The basic contact information was also listed below. </p>	
+					<!--video of content -->
+					<video id="blockhouse-responsive-design" class="drop-down-video" width="50%" style="display:block; margin:20px auto;" controls>
+						<source src="assets/Blockhouse-Responsive-Design.mp4" alt="Mobile Responsive Design" type="video/mp4">
+					</video>
+						<!-- paragraph about video -->
+						<p class="drop-down-paragraph">I prided myself on creating not only a user-friendly and aesthetically pleasing website, but also, a responsive site. Having made the site mobile responsive allowed us to reach a new audience. The video above shows how the site was compatible with all screens. </p>		
+				</div>
+<!-- new project image on page about software design for trainingGrid --->
+				<figure class="projects" id="trainingGrid-LMS">
+					<img class="project-image" id="trainingGrid-logo" src="assets/TG.png" width="100%" height:100%; alt="trainingGrid-Learning-Management-System">
+				</figure>	
+				<!-- toggle of project details -->
+					<div id="Project2-Information" class="project-info">
+						<!-- close button -->
+						<div class="close">X</div>
+						<!-- title of project -->
+						<h3>trainingGrid LMS</h3>
+						<!-- first image of details -->
+						<figure class="extra-large-image">
+							<img id="trainingGrid" class="main-image" src="assets/11.1-My-Grid.png" style="border:1px solid gray" width="100%"  alt="trainingGrid Learning Managment System Software Design">
+						</figure>
+						<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								I currently work as a UXUI Designer for Ready Training Online. Ready Training Online's biggest product is their Learning Management System. It was my task to redesign the system to be modern and user-friendly. At this point in time, this is the only image I can post on my portfolio as no other images have been posted to their website. I will be happy to provide more details about the project in person.
+							</p>
+						</div>
+<!-- third project in section about SOLO Safety App -->
+				<figure class="projects" id="solo-safety-app">
+					<img class="project-image" id="solo" src="assets/soloshot.png" width="100%" height:100%; alt="the SOLO safety app">
+				</figure>
+				<!-- project details toggle -->
+				<div id="Project3-Information" class="project-info">
+					<!-- close button -->
+						<div class="close">X</div>
+						<!-- title of project -->
+						<h3>SOLO Safety APP</h3>
+						<!-- first image of details -->
+						<figure class="small-centered-image">
+							<img id="SOLO-app" class="main-image" src="assets/solo-large.png" width="100%"  alt="SOLO Safety App UX Design">
+						</figure>
+						<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								SOLO is a super simple safety app that allows you to take on all of life's adventures with ease. I served as the User Experience Designer for the SOLO. I would love to show full details on this portfolio of the product but, SOLO is still being developed. In order to protect the User Interface Design of the App, I will only be reflecting on my role as the UX Lead. I would love to speak with you more in person in regards to the UI design!
+							</p>
+					<!-- second image of details -->
+						<figure class="drop-down-main-image">
+							<img id="solo-brain-storm" src="assets/solo-brain-storm.jpg" width="100%" alt="Brainstorming Ideas">
+						</figure> 
+					<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								SOLO was my senior capstone project. During capstone, you are placed into groups and have until the end of the year to brainstorm an idea for a product, create a working prototype, and launch a Kickstarter. My group and I realized quickly that while we were very different individuals we all had one thing in common - fear. Our lives were changing quickly as seniors. We would be embarking on new adventures by ourselves. With kidnappings and murders on the news daily, we all admitted to being scared. So we began to brainstorm ideas of how to combat this fear.
+							</p>
+					<!-- third image of details -->
+						<figure class="extra-large-image">
+							<img id="solo-logo" src="assets/solo-logo.png" width="100%" alt="SOLO Logo">
+						</figure> 
+					<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								We came up with the idea of creating an app that would alert a trusted user if you would not return from a specified event at the desired time. It was essentially collecting your missing person's report.<br><br> We loved the idea and new it could help people but how could we get people to want to use such a scary thing? By making it fun and inviting. I conducted extensive research on color and the competitive market. From that research, we were able to create this logo. The compass in the middle makes it exciting and adventurous rather than scary and ominous. The colors are warm, energizing, and appeal to both genders. They can also be seen by color-blind users.
+							</p>
+						
+					<!-- third image of details -->
+						<figure class="extra-large-image">
+							<img id="testing" src="assets/usability-testing.png" width="100%" alt="Usability Testing">
+						</figure> 
+					<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								The first round of usability testing was conducted using a "POP" prototype. We used the "Time-To-Task" method and the "Think-Out-Loud" process to discover any major areas of difficulty. The heuristic evaluation we chose to implement was the "Error Correction" heuristic. This rule of thumb states in order for the device to be able to be usable there should be little to no errors, or there should be some way to prevent the error from happening.
+								<br><br>
+								The usability test revealed that SOLO is an aesthetically pleasing and usable application. The users were able to maneuver through each task with ease. No user faced extreme frustration while completing each task and was able to do so in a matter of seconds. Each of them commented on the overall pleasing design and both genders were attracted to the brand colors.
+								<br><br>
+								Overall, the app accomplished the goal of providing them with a sense of security.
+							</p>
+					<!-- fourth image of details -->
+						<figure class="extra-large-image">
+							<img id="focus-groups" src="assets/focus-groups.png" width="100%" alt="Focus Groups">
+						</figure> 
+					<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								The usability testing had gone well and the feedback was wonderful! However, that wasn't enough to satisfy me that this app could appeal to everyone. I decided to conduct a focus group in order to truly find out. The faces above have been blurred to protect their identities. 
+								<br><br>
+								Utilizing the environment around us, we created several focus groups based on the most common social groups of our college: female athletes, female college students, substance-free female college students, male athletes, male college students, substance-free male college students. We asked users to signup for the group that they identified with best. 
+								<br><br>
+								We asked the groups open-ended questions about safety. We did not want to bias them about the idea of the app, we only wanted to learn about what situations make them feel in danger. The results were amazing! Almost every group reported the same findings. At the end, we showed them brief images of the app and asked their feedback. Everyone enjoyed the imagery and colors. 
+							</p>
+					<!-- fifth image of details -->
+						<figure class="extra-large-image">
+							<img id="split-ab-testing" src="assets/splitAB.png" width="100%" alt="Split AB Testing">
+						</figure> 
+					<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+							    Our group seemed invincible but we had one major thing against us, we were all iPhone users. This app needed to be programmed for iOS and Android devices. Therefore, we had to make sure the UI would be easy to understand no matter what medium it was on. 
+								<br><br>
+								 We conducted Split AB testing on several designs. We would design the same page in two different ways and ask users to perform a task on each. We would then ask for their feedback. This allowed us to understand what was the normal interactions and UI for each device.
+							</p>
+					<!-- sixth image of details -->
+						<figure class="extra-large-image">
+							<img id="#drunk-goggle-tests" src="assets/drunk-gogle.png" width="100%" alt="Error of Opportunity Test">
+						</figure> 
+					<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								One thing we understood right away, was the possibility of users operating the app while drunk. We had to be sure that the app was still just as easy to use while intoxicated. Of course, we couldn't ask testers to become drunk, that would be unethical. We could, however, ask them to wear "Drunk Goggles" and complete each task we ask of them.
+								<br><br>
+								During these tests, we used the "Error of Opportunity" method. Each screen of the app was analyzed to see how many possible areas of error there were on the screen. We then multiplied this number by the number of participants. We then tested and wrote down how many errors each individual participant made while proceeding to complete the task. We took the number of errors they made individually and divided it by the "Error of Opportunity" to get the success matrix. 
+								<br><br>
+								During testing, we also had someone write down exactly what errors were made. We later reviewed these notes and categorized the errors into slips, mistakes, user interface problems, or scenario problems. We were pleased to discover the app was still easy to use, even while impaired. While some areas had high error rates, it was due to slips and mistakes from the goggle's not the UI..
+							</p>
+					<!-- seventh image of details -->
+						<figure class="extra-large-image">
+							<img id="#kickstarter-video" src="assets/experience-sample.png" width="100%" alt="Experience Sampling">
+						</figure> 
+					<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								The objective of the app was to release a Kickstarter campaign. After creating a video for the campaign, we used Experience Sampling to determine what areas of the video did not engage the audience's interest. During selected points of the video, users were asked to rate their experience on a Likert scale of 1-5. 1 being incredibly unenjoyable and 5 being highly enjoyable. No scores were below 4.
+					</p>
+				</div>
+				
+			</div>
+		</section>
+<!-- section about communications work --->
+		<section id="commmunications-work" class="project-sections">
+		<h2>Communications</h2>
+<!-- Project 1 RTO Training Videos --->
+		<div class="project-container">
+		<figure class="projects" id="RTO-Ad">
+		<img class="project-image" id="LMS-Video" src="assets/cover-videos.png" width="100%" height:100%; alt="Broadcast Media Communications for RTO">
+		</figure>
+			<!-- project details toggle -->
+				<div id="Project4-Information" class="project-info">
+					<!-- close button -->
+						<div class="close">X</div>
+						<!-- title of project -->
+						<h3>RTO trainingGrid Release Videos</h3>
+						<!-- first image of details -->
+						<figure class="extra-large-image">
+							<a href="http://readytrainingonline.com/lms-releases/11-1/" target="_blank"><img id="release-11.1" class="main-image" src="assets/11.1-video.PNG" width="100%"  alt="Broadcast Video Annuncement"></a>
+						</figure>
+						<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								trainingGrid is being launched in planned phases with feature releases. For each new feature release, I star in a video that is broadcasted out to our clients. These videos let them know what changes lie inside our system. This is to get customers excited and reduce the amount of confusion. <a href="http://readytrainingonline.com/lms-releases/11-1/" target="_blank">Watch Release 11.1!</a>
+							</p>
+					<!-- second image of details -->
+						<figure class="extra-large-image">
+							<a href="http://readytrainingonline.com/lms-releases/11-0/" target="_blank"><img id="release-11.0" class="main-image" src="assets/11.0-video.PNG" width="100%"  alt="Broadcast Video Annuncement"></a>
+						</figure>
+						<!-- paragraph about image -->
+							<p class="drop-down-paragraph"> 
+								Each release enhances the LMS in some way. This video shows you what the LMS originally looked like compared to the 11.1 release. This video covers the 11.0 release which was easing users into changes by creating a hamburger menu. <a href="http://readytrainingonline.com/lms-releases/11-0/" target="_blank">Watch Release 11.0!</a>
+							</p>
+			</div>
+<!-- Project 2 B&B Blog -->		
+		<figure class="projects" id="blog-article-b&b">
+		<a href="https://www.benjaminandbond.com/csc-interview/" target="_blank"><img class="project-image" id="b&b" src="assets/Clinic-For-Special-Children.jpg" width="100%" height:100%; alt="Blog article for 'Designing Health Care'">
+		</a>
+		</figure>	
+<!-- Project 3 Blockhouse Blog --->			
+		<figure class="projects" id="blog-article-blockhouse">
+		<a href="https://www.blockhouse.com/7-5-benefits-of-open-storage/" target="_blank"><img class="project-image" id="blockhouse-blog" src="assets/Open-Storage.png" width="100%" height:100%; alt="content-marketing-blockhouse"></a>
+		</figure>	
+		</div>
+		</section>
+		
+<!-- Graphic Design & Visual Design Section--> 
+		<section id="visual-design-section" class="project-sections">
+		<h2>Graphic Design</h2>
+<!-- holds projects together with display flex-->
+		<div class="project-container">
+		<!-- first graphic design project is neuroscience logo -->
+		<figure class="projects" id="Neuroscience-logo">
+			<img class="project-image" id="LVC-Neuroscience" src="assets/brain.png" width="100%" height:100%; alt="Logo Concept for Lebanon Valley College Neuroscience">
+		</figure>
+			<div id="Project5-Information" class="project-info">
+				<!-- x to close --->
+					<div class="close">X</div>
+					<!-- title of details -->
+					<h3>Lebanon Valley College Neuroscience Logo</h3>
+					<!-- first image on toggle-->
+					<figure class="drop-down-main-image">
+						<img id="brain-logo" class="main-image" src="assets/brain.png" width="100%"  alt="Corporate Branding Client Logo - LVC Neuroscience">
+					</figure>
+						<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">While enrolled at Lebanon Valley College, I took the course "Corporate Branding". During this course, we would be assigned clients and have to develop a brand for them. One of these clients was the Lebanon Valley College Neuroscience Department.</p>
+				<!-- second image on toggle-->
+					<figure class="drop-down-main-image">
+						<img id="initial-concept" class="main-image" src="assets/brain_initial.png" width="100%"  alt="Brainstorm Idea">
+					</figure>
+						<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">This project was a competition. The client came before the class and we were able to interview her to find out more about the study of Neuroscience and her ideas for the logo. After learning that the department was made up of various studies, much like how the brain is made of different lobes, I created this concept.</p>
+			<!-- third image on toggle-->
+					<figure class="drop-down-main-image">
+						<img id="cosntructive-criticism" class="main-image" src="assets/brain_collab.png" width="100%"  alt="Brainstorm Idea">
+					</figure>
+						<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">I am a firm believer that without constructive criticism you will never truly progress. I submitted my design idea to our "Blackboard" discussion space. Here, my fellow students could provide feedback through comments.</p>
+				<!-- fourth image on toggle-->
+					<figure class="drop-down-main-image">
+						<img id="next-concept" class="main-image" src="assets/brain-concepts.png" width="100%"  alt="Second Concept">
+					</figure>
+						<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">After listening to their feedback, I then refined the concept. I still wanted to highlight the different lobes of the brain and the different sectors of science coming together to form the major.</p>
+				<!-- fifth image on toggle-->
+					<figure class="drop-down-main-image">
+						<img id="final-design" class="main-image" src="assets/final__brainlogo.png" width="100%"  alt="Final Design">
+					</figure>
+						<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">Finally, after getting more feedback, thinking of the versatility of the brand, and baring in mind the school style guide, I created this final version of the logo. I did not win the concept but I was proud to be one of the top contenders.</p>
+			</div>
+<!-- second project in section - zoo branding -->
+		<figure class="projects" id="Zoo-Brand">
+			<img class="project-image" id="Zoo-brand-development" src="assets/zoo-tickets.png" width="100%" height:90%; alt="Concept for Brand of a Zoo">
+		</figure>
+			<!-- slide toggle information regarding details of the blockhouse furniture website ---->
+				<div id="Project6-Information" class="project-info">
+				<!-- x to close --->
+					<div class="close">X</div>
+					<!-- title of details -->
+					<h3>St.Clare Nocturnal Zoo</h3>
+					<!-- first image on toggle-->
+					<figure class="extra-large-image">
+						<img id="zoo" class="main-image" src="assets/sign.png" width="100%"  alt="Zoo Sign">
+					</figure>
+					<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">One of my favorite projects was designing a brand concept for a zoo. This project was a lot of fun and allowed me to really play with the versatility of the brand. Above, is a sign you would see at St.Clare Nocturnal Zoo.</p>
+					<!-- second image on toggle-->
+					<figure class="drop-down-main-image">
+						<img id="zoo-ideas" class="main-image" src="assets/originialzoo_logo.png" width="100%"  alt="Logo ideas">
+					</figure>
+					<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">When I heard I had to brand a zoo, at first, I didn't know what direction I wanted to go in. Here are some of my original concepts for the zoo. Ultimately, I felt the children's zoo was a bit too predictable and decided to go with the Nocturnal Zoo.</p>
+					<!-- third image on toggle-->
+					<figure class="drop-down-main-image">
+						<img id="zoo-logo-variations" src="assets/variations-of-logo.png" width="100%"  alt="Logo variations">
+					</figure>
+					<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">There are a lot of nocturnal critters to see and I wanted the logo to reflect that. While the owl remains the main logo, there are several other variations to chose from as well. I thought this could be a fun thing for the zoo to do at different times of the year as well. The bats would be perfect for Halloween.</p>
+					<!-- fourth image on toggle-->
+							<figure class="extra-large-image">
+								<img id="farview"  src="assets/grafiti-wall.jpg" width="100%" alt="Full view of graffiti wall.">
+							</figure>
+					<!-- paragraph about old and new -->
+							<p class="drop-down-paragraph">Once I had a solid concept, I used a "Graffiti Wall" to get criticism. I simply taped my designs to a whiteboard in our studio and allowed any student or staff member to comment. The feedback was incredibly helpful.</p>
+					<!-- fifth image on toggle-->
+					<figure class="extra-large-image">
+						<img id="business-cards" src="assets/st-clare-business-cards.png" width="100%"  alt="Business Cards">
+					</figure>
+					<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">The zoo was something I saw as being fun for teens. Something unique and edgy with vibrant neon colors. I didn't want to lose this across any part of the design process. I mad the business cards dark and "mysterious" to reflect that vibe.</p>
+					<!-- sixth image on toggle-->
+					<figure class="extra-large-image">
+						<img id="zoo-tickets-adult-child" src="assets/zoo-tickets.png" width="100%"  alt="Children & Adult Tickets">
+					</figure>
+					<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">By the time I was done designing for this project, I was wishing I could get my hands on one of these tickets. The green was for adults while the orange was for children.</p>		
+			</div>
+	
+<!--Third graphic design project - MHA -->
+		<figure class="projects" id="MHA-logo">
+		<img class="project-image" id="MHA-brand" src="assets/MHA-Pamphlet-Front.png" width="100%" height:100%; alt="Brand for Mental Health Association of Lebanon PA">
+		</figure>
+			<!-- slide toggle information regarding details of the blockhouse furniture website ---->
+				<div id="Project7-Information" class="project-info">
+				<!-- x to close --->
+					<div class="close">X</div>
+					<!-- title of details -->
+					<h3>Mental Health Association of Lebanon PA</h3>
+					<!-- first image on toggle-->
+					<figure class="drop-down-main-image">
+						<img id="MHA-Logo" src="assets/MHA_logo.png" width="100%"  alt="MHA Lebanon PA Logo">
+					</figure>
+					<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">The Mental Health Association of Lebanon, PA came to LVC in desperate need of help. Their brand was actually turning people off. They felt it was much to clinical and the bell in their logo had a nasty stigma attached to it. Getting help for mental health disorders can be hard. They wanted people to feel invited to do so. I developed this brand for them.</p>
+				<!-- second image on toggle-->
+					<figure class="extra-large-image">
+						<img id="logo-ideas-town" class="main-image" src="assets/nostagia_town.png" width="100%"  alt="Town Logo Ideas">
+					</figure>
+					<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">Lebanon PA is my home town. I've always loved living there too. When I think of Lebanon, I think of biking around town as I often did growing up. I think of rolling cornfields and small-town shops. I think of some of the historic landmarks and the friendly faces I'm used to seeing. I wanted to bring that small town nostalgic vibe to the brand.
+						</p>
+					<!-- third image on toggle-->
+					
+					<!-- two images side by side--->
+					<div id="pamphlet" class="before-after-row">
+						<figure class="drop-down-image" style="border:none;">
+							<img id="front-of-pamphlet" class="drop-down-img" src="assets/feedback-zoo.png" width="100%" alt="Pamphlet Front Cover">
+						</figure>
+							<figure class="drop-down-image" style="border:none;">
+								<img id="back-of-pamphlet" class="drop-down-img" src="assets/backside-pamphlet.png" width="100%" alt="Back of Pamphlet">
+							</figure>
+					</div>	
+					<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">I ended up going with the above color palette to create a brighter and warmer feel. I was hoping this would make someone feel empowered to seek out mental help. This is an example of what a pamphlet could look like for the MHA using my brand concept.</p>
+					
+					<!-- fourth image on toggle-->
+					<figure class="extra-large-image">
+						<img id="responsive-logos" src="assets/responsive_logo.png" width="100%"  alt="Responsive Logo Options">
+					</figure>
+					<!-- paragraph about above image -->
+						<p class="drop-down-paragraph">While I loved the logo, I realized it wasn't as flexible as my designs usually are. I created these logo variations to assist with responsive projects that require something much smaller. Overall, I was very pleased with how the project turned out.</p>
+			</div>
+	
+		</div>
+		</section>
+
+	</article>
+
+<!-- about me part of the website -->
+	<article id="about-me">
+		<!-- picture of me -->
+		<figure id="picture-of-me">
+			<img id="Megan-Doris" src="assets/Megan-Doris.jpg" alt="Megan Doris UXUI Designer & Developer">
+			<!-- description of me -->
+				<div id="skills-traits">
+					<p>Hello! It's wonderful to meet you. I am a User Experience Designer serving the Lancaster, York, and Lebanon areas.<br> My skills range from UI Design, Graphic Design, Content Marketing, SEO and Front-end Web Development.<br> I enjoy my life on the farm and love being around animals and friends. Want to know more? Send me an email :)</p>
+				</div>
+		</figure>
+	</article>
+
+<!-- footer of page -->
+	<footer>
+		<!-- container for footer elements -->
+		<div class="footer-content">
+			<div id="email">
+			megandorisuxdesign@gmail.com
+			</div>
+			<div id="statement">
+			Made With Love &hearts;
+			</div>
+			<div id="linkedin">
+			www.linkedin.com/in/megandoris/
+			</div>
+		</div>
+	</footer>
+</wrapper>
+</body>
+</html>

@@ -1,0 +1,548 @@
+@charset "utf-8";
+
+/*body and html */
+body,html{
+	background-color:white;
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+	scroll-behavior: smooth;
+}
+
+/* universal styles */
+
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* prevents scrollbar from showing on toggles */
+::-webkit-scrollbar {display:none;}
+
+
+/*text styles */
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 80px;
+	color:white;
+	padding:0;
+	margin:0;
+}
+
+h2{
+	font-family: 'Roboto', san-serif;
+	color:#262831;
+	font-size:24px;
+	font-weight:normal;
+	margin-left:10px;
+	padding:0;
+	display:block;
+}
+
+h3{
+	font-family:'Roboto', sanserif;
+	Color:#204362;
+	font-size:40px;
+	text-align:center;
+}
+
+/* paragraph styles*/
+p a{
+	text-decoration:none;
+	font-weight:bold;
+	color:#204362;
+}
+
+p a:hover{
+	color:#97e5db;
+}
+
+/*container for all elements on the page */
+wrapper{
+	background-color:orange;
+	height:100%;
+	width:100%;
+	overflow:auto;
+}
+
+/*header for page */
+header{
+	width:100%;
+	height:50px;
+	background-color:#204362;
+	overflow:auto;
+	position:fixed;
+	z-index:20;
+}
+
+/*logo in header*/
+#logo{
+	float:left;
+	Font-Family:'Robot', 'sanserif';
+	font-weight:bold;
+	font-size:20px;
+	margin-top:10px;
+	margin-left:10px;
+}
+
+#logo a{
+	text-decoration:none;
+	color:#97e5db;
+}
+
+
+/*nav links*/
+li a{
+	text-decoration:none;
+	color:#97e5db;
+	font-family:'Roboto','Sanserif';
+	Font-weight:normal;
+}
+
+li{
+	list-style-type:none;
+	display:inline;
+	float:right;
+	margin:0;
+	padding-right:10px;
+}
+
+/*large image below header*/
+#hero{
+	width:100%;
+	height:80%;
+	background-image:url("assets/hero-image.jpg");
+	background-position:left center;
+	background-size:cover;
+	overflow:auto;
+}
+
+/*gradient overaly on image below header*/
+#overlay{
+	height:100%;
+	width:100%;
+	background-image:linear-gradient(#16879e, #97e5db);
+	opacity:.5;
+}
+
+/*words ontop of hero image*/
+#introduction{
+	position:absolute;
+	top:30%;
+	margin-left:auto;
+	margin-right:auto;
+	left:0;
+	right:0;
+	width:600px;
+	text-align:center;
+}
+
+#introduction h2{
+	color:white;
+	padding:0;
+	margin-top:-10px;
+}
+
+/*where projects are found*/
+#professional-work{
+	width:100%;
+	height:auto;
+	background-color:white;
+	overflow:auto;
+}
+
+/*project rows*/
+.project-sections{
+	width:100%;
+	height:auto;
+	overflow:auto;
+	padding-top:10px;
+	padding-bottom:20px;
+}
+
+/*container around project images*/
+.project-container{
+	display:flex;
+	justify-content:center;
+	width:100%;
+	overflow:auto;
+}
+
+/*width of project images*/
+.projects{
+	width:300px;
+}
+
+/*hover effect for projects*/
+.projects:hover{
+	 webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+    filter: blur(4px);
+}
+
+/*allows image to always fill 100% of project container*/
+.project-image{
+height:100%;
+}
+
+/*titles below images*/
+.figcaptions{
+	margin-top:-50%;
+	text-align:center;
+	font-weight:bold;
+	font-family:'Roboto', 'sanserif';
+	display:none;
+	position:absolute;
+	z-index:25;
+}
+
+.figcaptions a{
+	text-decoration:none;
+	color:white;
+}
+
+/*x button on toggle details */
+.close{
+	float:right;
+	font-size:35px;
+	color:#262831;
+	margin-right:10px;
+	font-family:'Roboto','sanserif';
+	font-weight:bold;
+	cursor:pointer;
+}
+
+/*toggle drop down of project details*/
+.project-info{
+	width:70%;
+	background-color:white;
+	position:fixed;
+	z-index:300;
+	border:#A7C5C3 1px solid;
+	top:0;
+	height:100%;
+	display:none;
+	overflow-y:scroll;
+	padding-bottom:30px;
+	
+}
+
+
+/*center image above paragraphs*/
+.drop-down-main-image{
+	margin:0 auto;
+	width:35%;
+}
+
+/*used for extra large images in toggle*/
+.small-centered-image{
+	width:20%;
+	margin:0 auto;
+}
+
+/*used to make images extra large*/
+.extra-large-image{
+	margin:0 auto;
+	width:50%;
+}
+
+/*paragraph below images on drop down toggle*/
+.drop-down-paragraph{
+	width:70%;
+	margin:0 auto;
+	color:#262831;
+	line-height:30px;
+	padding:20px;
+}
+
+.drop-down-paragraph{
+	width:90%;
+	margin:0 auto;
+	color:#262831;
+	line-height:30px;
+}
+
+/*used for rows where two images are side by side*/
+
+.before-after-row{
+	display:flex;
+	justify-content:center;
+	margin-top:20px;
+}
+
+/*used for images in rows where images are side by side*/
+.drop-down-image{
+	width:40%;
+	border:1px solid gray;
+}
+
+/*about me section of page*/
+#about-me{
+	width:100%;
+	height:auto;
+	background-color:#262831;
+	overflow:auto;
+	position:relative;
+	display:flex;
+	justify-content:center;
+	color:#Cacaca;
+}
+
+/*my image*/
+#Megan-Doris{
+	border-radius:50%;
+	float:left;
+	left:0;
+	margin-top:15px;
+}
+
+/*description next to image*/
+#skills-traits{
+	padding:10px;
+	margin:0;
+	text-align:left;
+	float:left;
+	width:450px;
+	margin-left:15px;
+	line-height:30px;
+}
+
+/*page footer*/
+footer{
+	width:100%;
+	height:60px;
+	background-color:#204362;
+	overflow:auto;
+	font-family:'Robot','sanserif';
+	color:#97e5db;
+}
+
+/*container around footer content*/
+.footer-content{
+	margin-top:15px;
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+}
+
+
+#email{
+	margin-left:20px;
+}
+
+#linkedin{
+	margin-right:20px;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 1280px) {
+  .project-info {
+    width:75%;
+  }
+}
+	
+	@media only screen and (max-width:1120px){
+	.project-info {
+    width:85%;
+  }
+		
+		#hero{
+			height:60%;
+		}
+		
+		#introduction{
+			top:27%;
+		}
+		
+		h1{
+			font-size:50px;
+		}
+
+	#skills-traits{
+	padding:10px;
+	margin:0;
+	clear:left;
+	margin-left:0;
+	font-size:14px;
+}
+		
+
+#Megan-Doris{
+	display:none;
+	
+}
+		
+	}
+
+	@media only screen and (max-width:900px){
+		h3{ font-size:30px;
+			
+		}
+}
+	
+	@media only screen and (max-width:830px){
+#hero{
+   height:50%;
+  }
+	
+	#introduction{
+			top:20%;
+		}	
+		
+		.projects{
+			width:80%;
+		}
+		
+	}
+	
+	@media only screen and (max-width:800px){
+#email{
+   font-size:14px;
+  }
+	
+#statement{
+   font-size:14px;
+  }
+	
+	#linkedin{
+   font-size:14px;
+  }
+}
+		
+	@media only screen and (max-width:700px){
+			.project-info{
+				width:100%;
+			}
+		}
+		
+		@media only screen and (max-width:600px){
+			#statement{
+				display:none;
+			}
+			
+			
+			#hero{
+				height:40%;
+			}
+			
+			#introduction{
+				width:auto;
+			}
+			
+			.project-container{
+				display:block;
+			}
+			
+			.projects{
+				width:60%;
+				margin:0 auto;
+			}
+			
+			h3{
+				font-size:24px;
+			}
+			
+			.drop-down-paragraph{
+				font-size:14px;
+			}
+			
+			.extra-large-image{
+				width:90%;
+			}
+			
+			.drop-down-main-image{
+				width:90%;
+			}
+			
+			.drop-down-image{
+				width:90%;
+				margin:20px auto;
+			}
+			
+			.before-after-row{
+				display:block;
+			
+			}
+			
+			.small-centered-image{
+				width:40%;
+			}
+			
+			.drop-down-video{
+				width:90%;
+			}
+			
+		}
+		
+		
+	@media only screen and (max-width:500px){
+		
+		footer{
+			height:auto;
+		}
+		.footer-content{
+			display:block;
+			font-size:14px;
+			text-align:center;
+		}
+		
+		#linkedin{
+			margin-right:0;
+			padding-bottom:15px;
+		}
+		
+		#email{
+			margin-left:0;
+			padding-bottom:5px;
+		}
+		
+		#about-me{
+			display:none;
+		}
+		
+		#about-link{
+			display:none;
+		}
+		
+		li a{
+			font-size:14px;
+		}
+		
+		}
+
+@media only screen and (max-width:380px){
+	h2{
+		text-align:center;
+	}
+	
+	#nav{
+		display:none;
+	}
+
+	
+	#hero{
+		height:35%;
+	}
+	
+	#introduction{
+		top:13%;
+	}
+	h1{
+		font-size:40px;
+	}
+	
+	h3{
+		font-size:18px;
+	}
+
+}
+
+@media only screen and (max-width:300px){
+	h1{
+		font-size:30px;
+	}
+	
+	h2{
+		font-size:20px;
+	}
+}
